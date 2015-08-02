@@ -1,7 +1,7 @@
 var models = require('../models/models.js');
 
 exports.load = function(req,res,next,quizId) {
-	models.Quiz.find(quizId).then (
+	models.Quiz.findById(quizId).then (
 		function (quiz) {
 			if (quiz) {
 				req.quiz = quiz;
