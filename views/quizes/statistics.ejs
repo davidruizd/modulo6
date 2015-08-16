@@ -1,0 +1,57 @@
+<script src="/javascripts/jquery.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<div id='stats'></div>
+
+<script type='text/javascript'>
+
+$(function () {
+    $('#stats').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Estadisticas'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: {point.y}(<b>{point.percentage:.1f}%</b>)'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.y} ({point.percentage:.1f} %)',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            colorByPoint: true,
+            data: [{
+                name: "Preguntas totales",
+                y: <%= preguntasTotales %>
+            }, {
+                name: "Comentarios Totales",
+                y: <%= comentariosTotales %>
+            }, {
+                name: "Comentarios Medios",
+                y: <%= comentariosMedios %>
+            }, {
+                name: "Preguntas sin comentarios",
+                y: <%= noComent %>
+            }, {
+                name: "Preguntas con comentarios",
+                y: <%= siComent %>
+            }]
+        }]
+    });
+});
+
+</script>

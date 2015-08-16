@@ -28,7 +28,16 @@ var sequelize = new Sequelize(DB_name, user, password, {
 var quiz_path = path.join(__dirname,'quiz');
 var Quiz = sequelize.import(quiz_path);
 
+//Importar Comment
+var comment_path = path.join(__dirname, 'comment');
+var Comment = sequelize.import(comment_path);
+
+//Se genera la relación
+Comment.belongsTo(Quiz);
+Quiz.hasMany(Comment);
+
 exports.Quiz = Quiz;
+exports.Comment = Comment;
 
 //Crear e inicializar tablas
 sequelize.sync().then(function() {

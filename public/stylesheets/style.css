@@ -1,18 +1,76 @@
-*                    { margin: 0; padding: 0; }
-body                 { font: 16px Georgia, serif; }
+* {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+}
 
-#page-wrap           { margin: 2% auto; color: white; }
-#page-wrap > .main   { border: 1px solid #999; padding: 1%; 
-	                   margin-bottom: 1px; color: black;}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
-section > div        { padding: 20px; }
-header, nav, section { background: #eee; text-align: center;}
-footer               { background: #eee; text-align: center;}
-nav span             { margin: 0px 10px 0px 0px;
-  					   width: 100%;
-  					   display: inline-block;}
+a{
+  color: #00B7FF;
+}
 
-#ErrorMsgs           { color: #f61; font-size: smaler}
-.right 				 {float: right;}
+#page-wrap {
+	margin: 2% auto;
+	color: black;
+}
 
-.quiz_img 			 { height: 150px; float: left;}
+#page-wrap .main {
+	border: 1px solid #999;
+	padding: 1%;
+	margin-bottom: 1px;
+	color: black;
+}
+
+#page-wrap .main .right{
+	float: right;
+}
+
+.main #s1 {
+	height: auto;
+}
+
+section > div {
+	padding: 20px;
+}
+
+header, nav, section, footer {
+	background: #eee;
+	text-align: center;
+	height: auto;
+}
+
+nav span {
+	margin: 0px 10px 0px 0px;
+}
+
+div .field {
+	font-size: 18px;
+	margin: 3px 0px 2px 0px
+}
+
+#ErrorMsgs {
+	color: #f61;
+	font-size: smaler;
+}
+
+#autor {
+	text-align: left;
+}
+
+#foto{
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	margin-left: 55%;
+	transform: scale(0.5,0.5);
+}
+
+#titulos{
+	margin: 20px;
+	font-size: 20px;
+}
